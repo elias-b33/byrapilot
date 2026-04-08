@@ -135,22 +135,32 @@ export const faq = [
   {
     question: "Måste vi byta system?",
     answer:
-      "Nej. Målet är att förbättra flöden runt det ni redan använder när det går.",
+      "Nej. Målet är att förbättra flöden runt det ni redan använder, som Fortnox, Visma eller Björn Lundén. Inga systembyten behövs.",
   },
   {
     question: "Är det här säkert att använda?",
     answer:
-      "Ja, lösningen byggs med människa i loopen och utan att automatisera professionella bedömningar.",
+      "Ja, lösningen byggs med människa i loopen och utan att automatisera professionella bedömningar. All automation är transparent och kontrollerad.",
   },
   {
     question: "Passar det bara större byråer?",
     answer:
-      "Nej. Fokus är små och medelstora byråer som känner att admin tar för mycket tid.",
+      "Nej. Fokus är små och medelstora redovisnings- och lönebyråer som känner att administration tar för mycket tid från det riktiga arbetet.",
   },
   {
     question: "Är det här ännu ett komplext AI-projekt?",
     answer:
-      "Nej. Tanken är ett smalt, praktiskt pilotflöde med tydligt värde.",
+      "Nej. Tanken är ett smalt, praktiskt pilotflöde med tydligt värde. Ingen hype, inga buzzwords — bara konkreta förbättringar.",
+  },
+  {
+    question: "Vilka system fungerar ByråPilot med?",
+    answer:
+      "ByråPilot fungerar med de flesta vanliga system som Fortnox, Visma, Björn Lundén och PE Accounting. Vi bygger flöden runt er befintliga miljö.",
+  },
+  {
+    question: "Hur lång tid tar det att komma igång?",
+    answer:
+      "Vanligtvis är ett pilotflöde igång inom en vecka efter vårt första samtal. Ni ser direkt vilka steg som sparar tid.",
   },
 ];
 
