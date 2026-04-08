@@ -3,9 +3,9 @@ export const siteConfig = {
   title: "ByråPilot | Automation för redovisnings- och lönebyråer",
   description:
     "Minska intern admin, jaga in underlag snabbare och få bättre ordning på kundkommunikationen med trygg automation och AI-stöd.",
-  email: "hej@byrapilot.se",
-  phone: "070-000 00 00",
-  bookingUrl: "#kontakt",
+  email: "eliasbredberg5@gmail.com",
+  phone: "073-955 87 71",
+  bookingUrl: "https://cal.eu/elias-bredberg-dvp79n/15-minuters-konsultsamtal",
 };
 
 export const hero = {

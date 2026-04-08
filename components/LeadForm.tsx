@@ -4,11 +4,31 @@ import { useState } from "react";
 import { finalCta } from "@/lib/content";
 
 export default function LeadForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setStatus("submitting");
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mkopevld", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -21,7 +41,7 @@ export default function LeadForm() {
           {finalCta.description}
         </p>
 
-        {submitted ? (
+        {status === "success" ? (
           <div className="bg-[#1E6B73]/10 rounded-xl p-8 text-center">
             <p className="text-[#14304A] font-semibold text-lg mb-2">
               Tack för ditt intresse!
@@ -110,11 +130,18 @@ export default function LeadForm() {
               />
             </div>
 
+            {status === "error" && (
+              <p className="text-red-600 text-sm text-center">
+                Något gick fel. Försök igen eller maila oss direkt.
+              </p>
+            )}
+
             <button
               type="submit"
-              className="w-full bg-[#1E6B73] text-white font-medium py-3.5 rounded-lg hover:bg-[#185a61] transition-colors"
+              disabled={status === "submitting"}
+              className="w-full bg-[#1E6B73] text-white font-medium py-3.5 rounded-lg hover:bg-[#185a61] transition-colors disabled:opacity-60"
             >
-              {finalCta.cta}
+              {status === "submitting" ? "Skickar..." : finalCta.cta}
             </button>
           </form>
         )}

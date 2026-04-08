@@ -28,7 +28,9 @@ export default function OfferCard() {
 
           <div className="text-center">
             <a
-              href="#kontakt"
+              href="https://cal.eu/elias-bredberg-dvp79n/15-minuters-konsultsamtal"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-[#1E6B73] text-white font-medium px-8 py-3.5 rounded-lg hover:bg-[#185a61] transition-colors"
             >
               {offer.cta}

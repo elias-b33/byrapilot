@@ -12,7 +12,9 @@ export default function Hero() {
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#kontakt"
+            href="https://cal.eu/elias-bredberg-dvp79n/15-minuters-konsultsamtal"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#1E6B73] text-white font-medium px-8 py-3.5 rounded-lg text-base hover:bg-[#185a61] transition-colors"
           >
             {hero.ctaPrimary}
