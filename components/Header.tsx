@@ -24,7 +24,7 @@ export default function Header() {
               {siteConfig.name}
             </span>
             <a
-              href="https://eleva.se"
+              href="https://eleva-eight.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="bp-subbrand hover:text-[#1E6B73] transition-colors"

@@ -17,7 +17,7 @@ export default function Footer() {
               Trygg automation och AI-stöd för redovisnings- och lönebyråer. Bygger flöden runt era befintliga system — utan systembyten.
             </p>
             <a
-              href="https://eleva.se"
+              href="https://eleva-eight.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-5 text-xs uppercase tracking-widest text-gray-300 hover:text-white transition-colors group"
