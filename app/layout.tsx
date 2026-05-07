@@ -60,6 +60,7 @@ export const metadata: Metadata = {
     title: "ByråPilot | Mindre admin. Bättre byråflöde.",
     description:
       "Vi hjälper redovisnings- och lönebyråer att minska intern admin, jaga in underlag snabbare och skapa tydligare flöden med trygg automation och AI-stöd.",
+    // OG image – ladda upp public/opengraph-image.png (1200×630) så Next.js auto-detekterar
   },
   twitter: {
     card: "summary_large_image",
@@ -68,6 +69,11 @@ export const metadata: Metadata = {
       "Minska intern admin och få bättre ordning på kundkommunikationen med trygg automation och AI-stöd.",
   },
   category: "technology",
+  verification: {
+    // Lägg in Search Console / Bing-koder här när du verifierar:
+    // google: "abc123",
+    // other: { "msvalidate.01": "..." },
+  },
 };
 
 export default function RootLayout({

@@ -42,6 +42,37 @@ function JsonLd() {
       "Processoptimering",
     ],
     priceRange: "$$",
+    parentOrganization: {
+      "@type": "Organization",
+      name: "Eleva",
+      url: "https://eleva-eight.vercel.app/",
+      description:
+        "Eleva är moderbolaget som fokuserar på bredare verksamhetsutveckling och digitalisering för svenska små och medelstora företag.",
+    },
+    founder: {
+      "@type": "Person",
+      name: "Elias Bredberg",
+      jobTitle: "Grundare",
+      knowsAbout: [
+        "Systemvetenskap",
+        "Verksamhetsutveckling",
+        "Processanalys",
+        "Automation",
+        "Digital strategi",
+      ],
+    },
+  };
+
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Elias Bredberg",
+    jobTitle: "Grundare, ByråPilot &amp; Eleva",
+    worksFor: [
+      { "@type": "Organization", name: "ByråPilot", url: "https://byrapilot.se" },
+      { "@type": "Organization", name: "Eleva", url: "https://eleva-eight.vercel.app/" },
+    ],
+    email: "eliasbredberg5@gmail.com",
   };
 
   const websiteSchema = {
@@ -143,6 +174,10 @@ function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
     </>
   );
