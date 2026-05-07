@@ -7,6 +7,7 @@ import OfferCard from "@/components/OfferCard";
 import HowItWorks from "@/components/HowItWorks";
 import Faq from "@/components/Faq";
 import Founder from "@/components/Founder";
+import ElevaBridge from "@/components/ElevaBridge";
 import LeadForm from "@/components/LeadForm";
 import Footer from "@/components/Footer";
 
@@ -221,6 +222,7 @@ export default function Home() {
         <Faq />
         <SeoContent />
         <Founder />
+        <ElevaBridge />
         <LeadForm />
       </main>
       <Footer />
