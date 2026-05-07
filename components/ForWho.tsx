@@ -11,7 +11,7 @@ export default function ForWho() {
           {forWho.items.map((item) => (
             <div
               key={item.title}
-              className="bg-[#F7FAFB] rounded-xl p-6 sm:p-8 border border-gray-100 text-center"
+              className="bg-[#FBF7F2] rounded-xl p-6 sm:p-8 border border-gray-100 text-center"
             >
               <h3 className="text-lg font-semibold text-[#14304A] mb-2">
                 {item.title}

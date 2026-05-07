@@ -2,12 +2,15 @@ import { offer } from "@/lib/content";
 
 export default function OfferCard() {
   return (
-    <section id="erbjudande" className="py-20 bg-[#F7FAFB]">
+    <section id="erbjudande" className="py-20 bg-[#FBF7F2]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-4">
+          <span className="bp-eyebrow mb-3 block">Erbjudandet</span>
+        </div>
         <h2 className="text-2xl sm:text-3xl font-bold text-[#14304A] text-center mb-4">
           {offer.heading}
         </h2>
-        <div className="mt-10 bg-white rounded-2xl border border-gray-200 p-8 sm:p-10 shadow-sm">
+        <div className="mt-10 bg-white rounded-2xl border border-[#14304A]/10 p-8 sm:p-10 shadow-[0_4px_24px_rgba(20,48,74,0.06)]">
           <div className="text-center mb-8">
             <span className="inline-block bg-[#1E6B73]/10 text-[#1E6B73] text-sm font-semibold px-4 py-1.5 rounded-full">
               {offer.packageName}

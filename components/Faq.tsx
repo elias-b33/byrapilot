@@ -7,7 +7,7 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-20 bg-[#F7FAFB]">
+    <section id="faq" className="py-20 bg-[#FBF7F2]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#14304A] text-center mb-12">
           Vanliga frågor

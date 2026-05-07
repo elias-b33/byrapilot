@@ -15,10 +15,24 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+    <header className="sticky top-0 z-50 bg-[#FBF7F2]/90 backdrop-blur border-b border-[#14304A]/10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <a href="#" className="text-xl font-bold text-[#14304A]">
-          {siteConfig.name}
+        <a href="#" className="flex items-center gap-3 group">
+          <span className="inline-block w-2 h-2 rounded-full bg-[#1E6B73]" />
+          <span className="flex flex-col leading-tight">
+            <span className="text-xl font-bold text-[#14304A] tracking-tight">
+              {siteConfig.name}
+            </span>
+            <a
+              href="https://eleva.se"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bp-subbrand hover:text-[#1E6B73] transition-colors"
+              onClick={(e) => e.stopPropagation()}
+            >
+              by Eleva
+            </a>
+          </span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -26,7 +40,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-gray-600 hover:text-[#14304A] transition-colors"
+              className="bp-nav-link text-xs uppercase tracking-widest font-medium text-gray-600 hover:text-[#14304A] transition-colors"
             >
               {link.label}
             </a>

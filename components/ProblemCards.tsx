@@ -37,7 +37,7 @@ export default function ProblemCards() {
           {problemCards.map((card) => (
             <div
               key={card.title}
-              className="bg-[#F7FAFB] rounded-xl p-6 sm:p-8 border border-gray-100"
+              className="bg-[#FBF7F2] rounded-xl p-6 sm:p-8 border border-gray-100"
             >
               <div className="text-[#1E6B73] mb-4">{icons[card.icon]}</div>
               <h3 className="text-lg font-semibold text-[#14304A] mb-2">

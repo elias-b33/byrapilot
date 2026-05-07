@@ -4,11 +4,121 @@
   --font-sans: var(--font-inter);
 }
 
+:root {
+  /* Warm "byrå-japandi" palette — distinct from Eleva but same DNA */
+  --bp-cream: #FBF7F2;
+  --bp-cream-2: #F5EFE6;
+  --bp-paper: #FFFFFF;
+  --bp-ink: #14304A;
+  --bp-ink-soft: #2C4A63;
+  --bp-teal: #1E6B73;
+  --bp-teal-deep: #185A61;
+  --bp-line: rgba(20, 48, 74, 0.12);
+  --bp-line-strong: rgba(20, 48, 74, 0.22);
+}
+
 body {
-  background: #ffffff;
+  background:
+    radial-gradient(1100px 500px at 80% -10%, rgba(30, 107, 115, 0.05), transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, rgba(20, 48, 74, 0.04), transparent 55%),
+    var(--bp-cream);
   color: #1a1a1a;
+}
+
+/* subtle paper grain on body */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.38 0 0 0 0 0.36 0 0 0 0 0.34 0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* hairline divider — Japandi-style thin line */
+.bp-hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--bp-line-strong), transparent);
+}
+
+/* eyebrow label */
+.bp-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bp-teal);
+}
+
+/* sub-brand tag */
+.bp-subbrand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(20, 48, 74, 0.55);
+}
+.bp-subbrand::before {
+  content: "";
+  width: 14px;
+  height: 1px;
+  background: rgba(20, 48, 74, 0.35);
+}
+
+/* nav link with subtle underline */
+.bp-nav-link {
+  position: relative;
+}
+.bp-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.bp-nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* fade-in reveal */
+.bp-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.bp-reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ensure content sits above grain layer */
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bp-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  body::before {
+    display: none;
+  }
 }

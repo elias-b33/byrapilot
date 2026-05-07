@@ -2,7 +2,7 @@ import { solution } from "@/lib/content";
 
 export default function SolutionFlow() {
   return (
-    <section id="losning" className="py-20 bg-[#F7FAFB]">
+    <section id="losning" className="py-20 bg-[#FBF7F2]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#14304A] text-center mb-4">
           {solution.heading}
